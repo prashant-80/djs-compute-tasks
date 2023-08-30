@@ -1,0 +1,108 @@
+Question 1 :-
+import math
+import os
+import random
+import re
+import sys
+
+if __name__ == '__main__':
+    n = int(input().strip())
+if n%2!=0 :
+    print("Weird")
+elif n%2==0  and n>=2 and n<=5 :
+    print("Not Weird")
+elif n%2==0 and  n>=6 and n<=20 :
+    print("Weird")
+elif n%2==0 and n>20 :
+    print("Not Weird")
+
+
+
+
+Question 2 :-
+if __name__ == '__main__':
+    n = int(input())
+i=0
+for i  in  range(n):
+    print(i*i)
+
+
+
+
+Question 3 :-
+def is_leap(year):
+    leap = False
+    if year%4==0 and (year%400==0 or year%100!=0):
+        leap=True
+    
+    return leap
+
+year = int(input())
+print(is_leap(year))
+
+
+
+
+
+
+Question 4:-
+if __name__ == '__main__':
+    N = int(input())
+
+    L=[];
+    for i in range(0,N):
+        cmd=input().split();
+        if cmd[0] == "insert":
+            L.insert(int(cmd[1]),int(cmd[2]))
+        elif cmd[0] == "append":
+            L.append(int(cmd[1]))
+        elif cmd[0] == "pop":
+            L.pop();
+        elif cmd[0] == "print":
+            print(L)
+        elif cmd[0] == "remove":
+            L.remove(int(cmd[1]))
+        elif cmd[0] == "sort":
+            L.sort();
+        else:
+            L.reverse();
+
+
+
+
+Question 5:-
+import numpy
+def arrays(arr):
+    arr.reverse()
+    ans=numpy.array(arr,float)
+    return ans
+
+
+
+
+Question 6:-
+cube = lambda x:x*x*x # complete the lambda function 
+def fibonacci(n):
+    fabo=[]
+    a=0
+    b=1
+    if n==0:
+        return fabo
+    fabo.append(a)
+    if n==1 :
+        return fabo
+    fabo.append(b)
+    if n==2 :
+        return fabo
+        
+    for i in range(2,n):
+        c=a+b
+        fabo.append(c)
+        a=b
+        b=c
+        
+    return fabo
+      
+if __name__ == '__main__':
+    n = int(input())
+    print(list(map(cube, fibonacci(n))))
